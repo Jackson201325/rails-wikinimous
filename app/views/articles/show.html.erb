@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="card mt-4">
+    <div class="card-header">
+      <h1 style="text-align: center; padding: 24px">Article</h1>
+    </div>
+    <div class="card-body d-flex justify-content-between ">
+      <blockquote class="blockquote mb-0">
+        <p><%= @article.content %></p>
+        <footer class="blockquote-footer"><cite title="Source Title"><%= @article.title.capitalize %></cite></footer>
+      </blockquote>
+      <div class="buttons align-self-baseline">
+        <%= link_to 'Back to Articles', articles_path, class:'btn btn-primary' %>
+        <%= link_to 'Edit Article', edit_article_path(@article), class:'btn btn-success' %>
+      </div>
+    </div>
+  </div>
+</div>
+
+

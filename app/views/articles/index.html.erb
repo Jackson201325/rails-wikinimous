@@ -1,0 +1,13 @@
+<div class="container">
+  <%= link_to '<h1 style="text-align: center; padding: 24px">Articles</h1>'.html_safe, new_article_path, class:'circle' %>
+  <% @articles.each do |article| %>
+    <div class="card mb-3" style="width: 30rem; padding: 24px; margin: 0 auto;">
+      <div class="card-body">
+        <h5 class="card-title"><%= article.title.capitalize %></h5>
+        <p class="card-text"><%= article.content %></p>
+        <%= link_to 'More Info', article_path(article), class:'card-link' %>
+        <%= link_to 'Delete', article_path(article), method: :delete, class:'card-link', data: {confirm: "Are YOU SURE ?"}%>
+      </div>
+  </div>
+  <% end %>
+</div>
